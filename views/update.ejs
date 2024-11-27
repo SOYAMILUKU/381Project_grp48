@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8 "> 
+        <title>update</title>
+        <link rel="stylesheet" href="/css/updateStyle.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    </head>
+    <body>
+        <div>
+        <nav>
+            <label class="logo">Online Book shop</label>
+            <ul>
+                <li><a href="/home" role="button">home</a></li>
+                <li><a href="/create" role="button">create</a></li>
+                <li><a href="/find" role="button">find</a></li>
+                <li><a href="/logout" role="button">logout</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="createTitle">
+            Update a book
+        </div>
+        <form action="/update" method="post">
+            <label for="bookName" class="textstyle"> Book Name</label><br/>
+            <errors path="bookName" cssClass="error" />
+            <input type="text" id="bookName" name="bookName" size="30" value=<%= book.bookName %> /><br/><br/><br/>
+
+            <label for="author" class="textstyle">Author</label><br/>
+            <errors path="author" cssClass="error" />
+            <input type="text" id="author" name="author" size="30" value=<%= book.author %> /><br/><br/><br/>
+
+            <label for="price" class="textstyle">Price</label><br/>
+            <errors path="price" cssClass="error" />
+            <input type="number" id="price" name="price" style="width:240px" value=<%= book.price %> /><br/><br/><br/>
+
+            <label for="bookDescription" class="textstyle">BookDescription</label><br/>
+            <errors path="bookDescription" cssClass="error" />
+            <textarea type="text" id="bookDescription" name="bookDescription" rows="5" cols="30" value=<%= book.bookDescription %> ></textarea><br/><br/><br/>
+            <p class="textstyle">ID: <%= book._id %></p><br/><br/>
+            <input type="hidden" name="_id" value=<%= book._id %>>
+            <button class="button button1" type="submit" for="form_create">update</button>
+        </form>
+    </body>
+
+    <script>
+        function addRow() {
+            var itemSalesList = $('#item_sales_input_list').clone();
+            itemSalesList.find('input').val('');
+            $('#div_item_list').append(itemSalesList);
+        }
+
+
+        function deleteRow() {
+            $('#div_item_list').children().last().remove();
+        }
+    </script>
+</html>

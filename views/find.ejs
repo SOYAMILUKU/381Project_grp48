@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8 "> 
+        <title>find</title>
+        <link rel="stylesheet" href="../css/findStyle.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/find.js"></script>
+    </head>
+    <body>
+        <div>
+            <nav>
+                <label class="logo">Online Book shop</label>
+                <ul>
+                    <li><a href="/home" role="button">home</a></li>
+                    <li><a href="/create" role="button">create</a></li>
+                    <li><a href="/find" role="button">find</a></li>
+                    <li><a href="/logout" role="button">logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <H2>Book Search</H2><hr><br>
+        <form action="/find" method="post">
+            <label for="bookName" class="textstyle"> Book Name</label><br/>
+            <errors path="bookName" cssClass="error" />
+            <input type="text" id="bookName" name="bookName" size="30" /><br/><br/>
+
+            <!-- <label for="author" class="textstyle">Author</label><br/>
+            <errors path="author" cssClass="error" />
+            <input type="text" id="author" name="author" size="30"/><br/><br/> -->
+            <button class="button button1" type="submit" for="form_create">Find Book</button>
+        </form>
+    </body>
+</html>

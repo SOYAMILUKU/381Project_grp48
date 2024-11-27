@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            flex: 2;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+    <head>
+        <meta charset="UTF-8 "> 
+        <title>create</title>
+        <link rel="stylesheet" href="/css/createStyle.css" type="text/css">
+        <script src="js/create.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    </head>
+    <body>
+        <div>
+        <nav>
+            <label class="logo">Online Book shop</label>
+            <ul>
+                <li><a href="/home" role="button">home</a></li>
+                <li><a href="/create" role="button">create</a></li>
+                <li><a href="/find" role="button">find</a></li>
+                <li><a href="/logout" role="button">logout</a></li>
+            </ul>
+        </nav>
+        </div>
+        <!-- <div class="bodycontent">
+            <div class="insertContainer"> -->
+            
+                <div class="createTitle">
+                    Create a book
+                </div>
+                <form action="/create" method="post">
+                    <label for="bookName" class="textstyle"> Book Name</label><br/>
+                    <errors path="bookName" cssClass="error" />
+                    <input type="text" id="bookName" name="bookName" size="30"/><br/><br/><br/>
+
+                    <label for="author" class="textstyle">Author</label><br/>
+                    <errors path="author" cssClass="error" />
+                    <input type="text" id="author" name="author" size="30"/><br/><br/><br/>
+
+                    <label for="price" class="textstyle">Price</label><br/>
+                    <errors path="price" cssClass="error" />
+                    <input type="number" id="price" name="price" style="width:240px"/><br/><br/><br/>
+
+                    <label for="bookDescription" class="textstyle">BookDescription</label><br/>
+                    <errors path="bookDescription" cssClass="error" />
+                    <textarea type="text" id="bookDescription" name="bookDescription" rows="5" cols="30"></textarea><br/><br/><br/>
+                    <div>
+                        <button class="button button1" type="submit" for="form_create">create</button>
+                    </div>
+                </form>
+            <!-- </div>
+        </div> -->
+    </body>
+</html>

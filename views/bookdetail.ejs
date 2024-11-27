@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8 "> 
+        <title>bookdetail</title>
+        <link rel="stylesheet" href="/css/detailStyle.css" type="text/css">
+        <script src="js/create.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    </head>
+    <body>
+        <div>
+        <nav>
+            <label class="logo">Online Book shop</label>
+            <ul>
+                <li><a href="/home" role="button">home</a></li>
+                <li><a href="/create" role="button">create</a></li>
+                <li><a href="/find" role="button">find</a></li>
+                <li><a href="/logout" role="button">logout</a></li>
+            </ul>
+        </nav>
+        </div>
+		    <H2>Book Details</H2><hr><br>
+            <p>ID: <%= book._id %></p><br>
+		    <p>Book Name: <%= book.bookName %></p><br>
+		    <p>Author: <%= book.author %></p><br>
+            <p>Price: <%= book.price %></p><br>
+            <p>BookDescription: <%= book.bookDescription %></p><br>
+
+		    <% if (book.photo) { %>
+		        <img src="data:image/jpg;base64, <%= booking.photo %>"><br>
+		    <% } %>
+
+		    <a class="button button1" href="/update?_id=<%= book._id %>">edit</a><br>
+            <a class="button button2" href="/delete?_id=<%= book._id %>">delete</a><br>
+		    <a class="button button1" href="/">home</a>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "name": "project",
+    "description": "Node Express Project",
+    "author": "Lui Kwun Hei Haven 13271519",
+    "version": "0.0.1",
+    "main": "index.js",
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.332.0",
+        "@aws-sdk/s3-request-presigner": "^3.332.0",
+        "@types/express-fileupload": "^1.5.1",
+        "aws-sdk": "^2.1692.0",
+        "body-parser": "^1.20.3",
+        "cookie-session": "*",
+        "ejs": "^3.1.10",
+        "express": "^4.21.1",
+        "express-fileupload": "^1.5.1",
+        "mongodb": "*",
+        "mongoose": "^8.4.3",
+        "tunnelmole": "^2.2.15"
+    },
+    "engine": ">=21.2.0",
+    "scripts": {
+        "start-run": "npm start && tmole 8099"
+    }
+}
