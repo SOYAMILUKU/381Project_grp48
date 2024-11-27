@@ -6,7 +6,7 @@ Name: Lui Kwun Hei 	(13271519)
       Leung Ho Cheung 	(13742912)
       Ho Chung Wang 	(13343060)
       Hong Ming Yan 	(13019441)
-github page:
+github page:https://github.com/SOYAMILUKU/381Project_grp48
 
 # Installation	!!!IMPORTANT!!!
 After you download the files, open cmd of the file "381project-<group 48>".
